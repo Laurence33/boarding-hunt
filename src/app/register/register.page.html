@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Join BH-Hunt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size-md="8" offset-md="2">
+
+        <ion-card>
+
+          <ion-card-header>
+            <ion-card-subtitle>Register</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+
+            <ion-item>
+              <ion-label position="floating">First Name</ion-label>
+              <ion-input required="true" [(ngModel)]="owner.FName"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Last Name</ion-label>
+              <ion-input required="true"[(ngModel)]="owner.LName"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Birthdate</ion-label>
+              <ion-input required="true" type="date" [(ngModel)]="owner.birthdate"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Address</ion-label>
+              <ion-input required="true" type="text" minLength="8" [(ngModel)]="owner.address"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input required="true" type="email" inputmode="text" minLength="8" [(ngModel)]="owner.email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Phone</ion-label>
+              <ion-input required="true" placeholder="10-digit phone number" inputmode="tel" minLength="10" maxLength="10" [(ngModel)]="owner.phone"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>I accept the terms and policy of this app.</ion-label>
+              <ion-checkbox color= "medium" slot="start"></ion-checkbox>
+            </ion-item>
+          </ion-card-content>
+
+        </ion-card>
+        
+
+        <ion-button color="primary" expand="block" shape="round" (click)="registerUser()">
+          Register
+        </ion-button>
+        <ion-button color="medium" expand="block" shape="round">
+          Already have an account
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
