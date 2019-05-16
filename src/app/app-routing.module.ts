@@ -7,7 +7,6 @@ const routes: Routes = [
   { path: 'profile', loadChildren: './user/owner/profile/profile.module#ProfilePageModule' },
   { path: 'owner-profile', loadChildren: './owner/profile/profile.module#ProfilePageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-  
 ];
 
 @NgModule({

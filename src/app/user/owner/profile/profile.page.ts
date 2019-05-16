@@ -17,6 +17,8 @@ export class ProfilePage implements OnInit {
       // console.log(owners)
       this.owners = owners;
     });
+    for (let index = 0; index < this.owners.length; index++) {
+      console.log(this.owners[index].id);
+    }
   }
-
 }

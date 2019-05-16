@@ -9,11 +9,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire'; // from firebase
+import { environment } from '../environments/environment'; // Firebase config
+import { AngularFirestoreModule } from '@angular/fire/firestore'; // from firebase
 
-import { UserOwnerProfileService } from './services/user-owner-profile.service';
+import { UserOwnerProfileService } from './services/user-owner-profile.service'; // service made by me
 
 
 @NgModule({
