@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: 'profile', loadChildren: './user/owner/profile/profile.module#ProfilePageModule' },
   { path: 'owner-profile', loadChildren: './owner/profile/profile.module#ProfilePageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'search', loadChildren: './search/search.module#SearchPageModule' },
+  { path: 'createPassword', loadChildren: './create-password/create-password.module#CreatePasswordPageModule' },
 ];
 
 @NgModule({

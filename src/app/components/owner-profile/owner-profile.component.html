@@ -5,15 +5,15 @@
               <ion-card>
                 <ion-card-header>
                   <img src="\assets\shapes.svg">
-                  <ion-card-title>Laurence Cortez</ion-card-title>
-                  <ion-card-subtitle>Carig-Sur, Tuguegarao City, Cagayan</ion-card-subtitle>
+                  <ion-card-title>{{owner.LName}}</ion-card-title>
+                  <ion-card-subtitle>{{owner.address}}</ion-card-subtitle>
                 </ion-card-header>
               </ion-card>
               <ion-list>
                   <ion-item>
                     <ion-label>Email: </ion-label>
                     <ion-text color="medium">
-                      <p>laurencecortez26.lc@gmail.com</p>
+                      <p>{{owner.email}}</p>
                     </ion-text>
                   </ion-item>
                   <ion-item>
@@ -37,7 +37,7 @@
                   <ion-item>
                     <ion-label>Phone: </ion-label>
                     <ion-text color="medium">
-                      <p>+639555174096</p>
+                      <p>{{owner.phone}}</p>
                     </ion-text>
                   </ion-item>
                 </ion-list>

@@ -6,17 +6,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { RegisterPage } from './register.page';
-import { CreatePasswordPage } from './create-password/create-password.page';
 
 const routes: Routes = [
   {
     path: '',
     component: RegisterPage
-  },
-  {
-    path: 'createPassword',
-    // component: CreatePasswordPage
-    loadChildren: './create-password/create-password.module#CreatePasswordPageModule'
   }
 ];
 
@@ -27,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [RegisterPage, CreatePasswordPage]
+  declarations: [RegisterPage]
 })
 export class RegisterPageModule {}

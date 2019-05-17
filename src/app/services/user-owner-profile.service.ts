@@ -9,12 +9,12 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserOwnerProfileService {
-  
+
   ownersCollection: AngularFirestoreCollection<Owner>;
   owners: Observable<Owner[]>;
+  owner: Observable<Owner>;
 
-  constructor(private afs: AngularFirestore) { 
-
+  constructor(private afs: AngularFirestore) {
     this.ownersCollection = this.afs.collection<Owner>('owners');
 
     this.owners = this.ownersCollection.snapshotChanges().pipe(
@@ -27,11 +27,15 @@ export class UserOwnerProfileService {
     );
   }
 
-  getOwners(){
+  getOwners() {
     return this.owners;
   }
 
-  registerUser(owner: Owner){
+  getOwner(id: string): Observable<Owner> {
+    return this.ownersCollection.doc(id).valueChanges();
+  }
+
+  registerUser(owner: Owner) {
     this.ownersCollection.add(owner);
   }
 }

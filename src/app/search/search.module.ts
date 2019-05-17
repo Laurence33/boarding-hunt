@@ -5,17 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProfilePage } from './profile.page';
-import { OwnerProfileComponent } from '../../../components/owner-profile/owner-profile.component';
+import { SearchPage } from './search.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProfilePage
-  },
-  {
-    path: ':id',
-    component: OwnerProfileComponent
+    component: SearchPage
   }
 ];
 
@@ -26,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ProfilePage, OwnerProfileComponent]
+  declarations: [SearchPage]
 })
-export class ProfilePageModule {}
+export class SearchPageModule {}
